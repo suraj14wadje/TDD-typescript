@@ -39,7 +39,12 @@ describe("calculator", () => {
         expect(()=>add("//;\n-1;;;-2")).toThrow('negative numbers not allowed -1,-2')
         expect(()=>add("//;\n-1;;;-2,1 -10")).toThrow('negative numbers not allowed -1,-2,-10')
         
-
     });
+
+    it("ignores numbers greater than 1000", () => {
+        const result = add("//;\n1;;;2, 1001");
+        expect(result).toEqual(3);
+      });
+    
   });
 });

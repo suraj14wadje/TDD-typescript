@@ -13,7 +13,7 @@ export const add = (numbers : string)=>{
             throw new Error(`negative numbers not allowed ${negativeNumbers.join(',')}`)
         }
        
-        sum = numbersArray.reduce((prev,current)=>prev+current);
+        sum = numbersArray.filter(num=>num<=1000).reduce((prev,current)=>prev+current);
     }
 
     return sum;
