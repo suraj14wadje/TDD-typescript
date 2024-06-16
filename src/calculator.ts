@@ -1,5 +1,3 @@
-
-
 export const add = (numbers : string)=>{
     let sum = 0;
 
@@ -10,8 +8,8 @@ export const add = (numbers : string)=>{
 
         const filteredNumbers = numbers.replace(nonDigitRegex,delimiter)
         const numbersArray = filteredNumbers.split(delimiter).map(Number);
-        const negativeNumbers = numbersArray.filter(num=>num<0);
 
+        const negativeNumbers = numbersArray.filter(num=>num<0);
         if(negativeNumbers.length>0){
             throw new Error(`negative numbers not allowed ${negativeNumbers.join(',')}`)
         }
