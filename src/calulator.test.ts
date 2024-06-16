@@ -18,6 +18,16 @@ describe('calculator',()=>{
             const result = add("5,6");
             expect(result).toEqual(11)
         })
+
+        it('handles any amount of numbers',()=>{
+            const result = add("5,6,2,4");
+            expect(result).toEqual(17)
+        })
+
+        it('handles new line between the numbers instead of comma',()=>{
+            const result = add("1\n2,3");
+            expect(result).toEqual(6)
+        })
     })
 
     
