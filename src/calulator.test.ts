@@ -44,7 +44,22 @@ describe("calculator", () => {
     it("ignores numbers greater than 1000", () => {
         const result = add("//;\n1;;;2, 1001");
         expect(result).toEqual(3);
-      });
+    });
+
+    it('handles delimiters of any length',()=>{
+        const result = add("//[***]\n1***2***3");
+        expect(result).toEqual(6);
+    })
+
+    it('handles multiple delimiters',()=>{
+        const result = add("//[*][%]\n1*2%3");
+        expect(result).toEqual(6);
+    })
+
+    it('handles multiple delimiters with length longer than one character',()=>{
+        const result = add("//[*][%]\n1*****2%%%%%%3");
+        expect(result).toEqual(6);
+    })
     
   });
 });
