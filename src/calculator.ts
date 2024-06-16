@@ -1,7 +1,9 @@
 
 
 export const add = (numbers : string)=>{
-    const sum = 0;
+    let sum = 0;
 
+    if(numbers) sum = Number(numbers);
+    
     return sum;
 }
