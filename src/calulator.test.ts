@@ -13,6 +13,11 @@ describe('calculator',()=>{
             const result = add("6");
             expect(result).toEqual(6)
         })
+
+        it('returns sum of comma separated numbers',()=>{
+            const result = add("5,6");
+            expect(result).toEqual(11)
+        })
     })
 
     
