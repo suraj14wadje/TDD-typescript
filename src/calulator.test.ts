@@ -28,6 +28,11 @@ describe('calculator',()=>{
             const result = add("1\n2,3");
             expect(result).toEqual(6)
         })
+
+        it('handles any delimiter',()=>{
+            const result = add("//;\n1;;;2");
+            expect(result).toEqual(3)
+        })
     })
 
     
