@@ -1,5 +1,7 @@
 
 
 export const add = (numbers : string)=>{
-    return "";
+    const sum = 0;
+
+    return sum;
 }
