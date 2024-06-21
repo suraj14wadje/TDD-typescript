@@ -2,7 +2,7 @@ export const add = (numbers : string)=>{
     let sum = 0;
 
     if(numbers){
-        const nonDigitRegex = /[^\d-]/g;
+        const nonDigitRegex = /[^\d-.]/g;
         const delimiter = ' ';
         const greatestAllowedNumber = 1000;
 
@@ -17,5 +17,5 @@ export const add = (numbers : string)=>{
         sum = numbersArray.filter(num=>num<=greatestAllowedNumber).reduce((prev,current)=>prev+current);
     }
 
-    return sum;
+    return Math.round(sum * 10)/10;
 }

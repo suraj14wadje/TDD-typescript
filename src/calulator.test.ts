@@ -60,6 +60,14 @@ describe("calculator", () => {
         const result = add("//[*][%]\n1*****2%%%%%%3");
         expect(result).toEqual(6);
     })
+
+    it('allows decimal numbers as well',()=>{
+      let result = add("2.3, 4.7");
+      expect(result).toEqual(7.0);
+
+      result = add("2.3, 4.6");
+      expect(result).toEqual(6.9);
+    })
     
   });
 });
